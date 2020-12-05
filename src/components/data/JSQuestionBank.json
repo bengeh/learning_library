@@ -1,0 +1,59 @@
+{
+    "questions": [
+        {
+            "index": 1,
+            "question": "Explain event delegation",
+            "link": ["https://medium.com/@bretdoucette/part-4-what-is-event-delegation-in-javascript-f5c8c0de2983"],
+            "answer": "The idea of event delegation is simple. Instead of attaching the event listeners directly to the children elements, you delegate listening to the parent <div id='buttons'>. When a button is clicked, the listener of the parent element catches the bubbling event."
+        },
+        {
+            "index": 2,
+            "question": "Explain event bubbling",
+            "link": ["https://medium.com/@bretdoucette/part-4-what-is-event-delegation-in-javascript-f5c8c0de2983", "https://javascript.info/event-delegation"],
+            "answer": "Whenever a user makes a click it ripples up all the way up to the top of the DOM and triggers clicks events on all the parent elements of the element you clicked. You don’t always see these clicks, because you aren’t always listening (with an event listener) for a click on these elements, but this bubbling up does happen. \nBecause of its bubbling nature, event propagation basically means that anytime you click one of our inputs on the DOM, you are effectively clicking the entire document body."
+        },
+        {
+            "index": 3,
+            "question": "DOM",
+            "link":["https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction", "https://www.w3.org/TR/WD-DOM/introduction.html"],
+            "answer": "The Document Object Model (DOM) is a programming API for HTML and XML documents. It defines the logical structure of documents and the way a document is accessed and manipulated. In the DOM specification, the term 'document' is used in the broad sense - increasingly, XML is being used as a way of representing many different kinds of information that may be stored in diverse systems, and much of this would traditionally be seen as data rather than as documents. Nevertheless, XML presents this data as documents, and the DOM may be used to manage this data."
+        },
+        {
+            "index": 4,
+            "question": "What is closure",
+            "link": ["https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures"],
+            "answer": "A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function’s scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time."
+        },
+        {
+            "index": 5,
+            "question": "Difference between forEach and map",
+            "link": ["https://codeburst.io/javascript-map-vs-foreach-f38111822c0f"],
+            "answer": "The main difference between .forEach and .map() is that .map() returns a new array. If you need the result, but do not wish to mutate the original array, .map() is the clear choice. If you simply need to iterate over an array, forEach is a fine choice."
+        },
+        {
+            "index": 6,
+            "question": "What is an event loop",
+            "link": ["https://medium.com/@jonathan_wong/what-are-javascript-event-loops-30c72a6ab674"],
+            "answer": "The event loop is a programming construct or design pattern that waits for and dispatches events or messages in a program. The event loop’s purpose is to look at the call stack and the queue. When the stack is empty, it takes the first thing on the queue and executes it."
+        },
+        {
+            "index": 7,
+            "question": "var vs let",
+            "link": ["https://stackoverflow.com/questions/762011/whats-the-difference-between-using-let-and-var#:~:text=The%20main%20difference%20is%20the,outside%20the%20loop%20for%20example.&text=let%20allows%20you%20to%20declare,on%20which%20it%20is%20used"],
+            "answer": "The main difference is the scope difference, while let can be only available inside the scope it's declared, like in for loop, var can be accessed outside the loop for example",
+            "code": "for (var i = 0; i < 4; i++) { setTimeout(() => console.log(i), 0)} returns 4 four times VS for (let i = 0; i < 4; i++) {setTimeout(() => console.log(i), 0)} returns 0,1,2,3"
+        },
+        {
+            "index": 8,
+            "question": "Hoisting in JS",
+            "link": ["https://www.w3schools.com/js/js_hoisting.asp#:~:text=Hoisting%20is%20JavaScript's%20default%20behavior%20of%20moving%20all%20declarations%20to,script%20or%20the%20current%20function)."],
+            "answer": "In variable hoisting, only the variable declarations, and not the variable definition/assignment, is moved to the top of the scope chain. In function hoisting, both the function declaration as well as the definition is moved to the top of the scope chain."
+        },
+        {
+            "index": 9,
+            "question": "What is Function.prototype.bind",
+            "link": ["https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind"],
+            "answer": "The bind() method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called."
+        }
+      ]
+}

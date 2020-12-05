@@ -1,0 +1,10 @@
+{
+    "questions": [
+        {
+            "index": 1,
+            "question": "What is a DOCTYPE",
+            "link": ["https://www.tutorialrepublic.com/html-tutorial/html-doctypes.php"],
+            "answer": "A Document Type Declaration, or DOCTYPE for short, is an instruction to the web browser about the version of markup language in which a web page is written. A DOCTYPE declaration appears at the top of a web page before all other elements. According to the HTML specification or standards, every HTML document requires a valid document type declaration to insure that your web pages are displayed the way they are intended to be displayed."
+        }
+      ]
+}

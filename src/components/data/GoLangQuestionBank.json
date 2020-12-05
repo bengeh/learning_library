@@ -1,0 +1,10 @@
+{
+    "questions": [
+        {
+            "index": 1,
+            "question": "What is static typing in TypeScript?",
+            "link": ["https://golang.org/doc/gopath_code.html"],
+            "answer": "A workspace is a directory hierarchy with two directories at its root: src contains Go source files, and bin contains executable commands. The go tool builds and installs binaries to the bin directory. The src subdirectory typically contains multiple version control repositories (such as for Git or Mercurial) that track the development of one or more source packages."
+        }
+      ]
+}

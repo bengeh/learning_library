@@ -1,0 +1,10 @@
+{
+    "questions": [
+        {
+            "index": 1,
+            "question": "What is static typing in TypeScript?",
+            "link": ["https://itnext.io/2-minutes-of-statically-typed-typescript-bb97f894e2f9"],
+            "answer": "Static typing means parameters, variables, and object members have types that compiler recognizes at the time of compile. This helps in detecting early errors faster than unit test runs. It also greatly helps IDEs with auto-completion and API exploration with statically typed DOM."
+        }
+      ]
+}

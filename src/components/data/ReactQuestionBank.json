@@ -1,0 +1,22 @@
+{
+    "questions": [
+        {
+            "index": 1,
+            "question": "What is JSX?",
+            "link": ["https://www.w3schools.com/react/react_jsx.asp#:~:text=JSX%20stands%20for%20JavaScript%20XML,and%20add%20HTML%20in%20React."],
+            "answer": "JSX is a syntax extension to JavaScript and comes with the full power of JavaScript. JSX produces React “elements”. You can embed any JavaScript expression in JSX by wrapping it in curly braces. After compilation, JSX expressions become regular JavaScript objects. This means that you can use JSX inside of if statements and for loops, assign it to variables, accept it as arguments, and return it from functions."
+        },
+        {
+            "index": 2,
+            "question": "Functional Component VS Class Component",
+            "link": ["https://www.geeksforgeeks.org/differences-between-functional-components-and-class-components-in-react/"],
+            "answer": "A functional component is just a plain JavaScript function that accepts props as an argument and returns a React element, whereas a class component requires you to extend from React. Component and create a render function which returns a React element."
+        },
+        {
+            "index": 3,
+            "question": "What is state in React",
+            "link": ["https://www.geeksforgeeks.org/reactjs-state-react/"],
+            "answer": "The state is an instance of React Component Class can be defined as an object of a set of observable properties that control the behavior of the component. In other words, the State of a component is an object that holds some information that may change over the lifetime of the component"
+        }
+      ]
+}

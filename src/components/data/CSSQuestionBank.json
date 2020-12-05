@@ -1,0 +1,66 @@
+{
+    "questions": [
+        {
+            "index": 1,
+            "question": "What is static",
+            "link": ["https://developer.mozilla.org/en-US/docs/Web/CSS/position"],
+            "answer": "The default position; the element will flow into the page as it normally would. The top, right, bottom, left and z-index properties do not apply."
+        },
+        {
+            "index": 2,
+            "question": "What is relative",
+            "link": ["https://developer.mozilla.org/en-US/docs/Web/CSS/position"],
+            "answer": "The element's position is adjusted relative to itself, without changing layout (and thus leaving a gap for the element where it would have been had it not been positioned)."
+        },
+        {
+            "index": 3,
+            "question": "What is absolute",
+            "link": ["https://developer.mozilla.org/en-US/docs/Web/CSS/position"],
+            "answer": "The element is removed from the flow of the page and positioned at a specified position relative to its closest positioned ancestor if any, or otherwise relative to the initial containing block. Absolutely positioned boxes can have margins, and they do not collapse with any other margins. These elements do not affect the position of other elements."
+        },
+        {
+            "index": 4,
+            "question": "What is fixed",
+            "link": ["https://developer.mozilla.org/en-US/docs/Web/CSS/position"],
+            "answer": "The element is removed from the flow of the page and positioned at a specified position relative to the viewport and doesn't move when scrolled."
+        },
+        {
+            "index": 5,
+            "question": "What is sticky",
+            "link": ["https://developer.mozilla.org/en-US/docs/Web/CSS/position"],
+            "answer": "Sticky positioning is a hybrid of relative and fixed positioning. The element is treated as relative positioned until it crosses a specified threshold, at which point it is treated as fixed positioned."
+        },
+        {
+            "index": 6,
+            "question": "Flexbox vs Grid",
+            "link": ["https://developer.mozilla.org/en-US/docs/Web/CSS/flex", "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout#:~:text=already%20be%20using.-,Grid%20and%20flexbox,columns%20at%20the%20same%20time."],
+            "answer": "The basic difference between CSS Grid Layout and CSS Flexbox Layout is that flexbox was designed for layout in one dimension - either a row or a column. Grid was designed for two-dimensional layout - rows, and columns at the same time"
+        },
+        {
+            "index": 7,
+            "question": "flex-grow 1",
+            "link": ["https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow"],
+            "answer": "The flex-grow CSS property sets the flex grow factor of a flex item main size. It's telling the items to consume free space."
+        },
+        {
+            "index": 8,
+            "question": "inline vs block vs inline-block",
+            "link": [""],
+            "answer": "",
+            "table": [
+                {
+                    "title": "inline",
+                    "content": ["a", "b"]
+                },
+                {
+                    "title": "block",
+                    "content": ["c", "d"]
+                },
+                {
+                    "title": "inline-block",
+                    "content": ["e","f"]
+                }
+            ]
+        }
+      ]
+}
