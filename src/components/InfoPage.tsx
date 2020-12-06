@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import styled from 'styled-components';
+import HeaderContext from './HeaderContext';
 
 type InfoPageProp = {
     questionList: Array<any>
@@ -7,12 +8,18 @@ type InfoPageProp = {
 }
 
 const InfoPage = (props: InfoPageProp) => {
+    const headerContext = useContext(HeaderContext);
+    console.log("hello header")
+    console.log(headerContext)
+
+
     const QuestionsMapper = props.questionList
     const [showAnswer, setShowAnswer] = useState({'name': '', 'open': false})
     console.log("this the curr page..." + props.currPage)
     function onClick(evt: any){
-        console.log("this the evnt...")
-        console.log(evt)
+        if(headerContext.state.isMenuOpen){
+            headerContext.setState({isMenuOpen: false})
+        }
         if (showAnswer.open && showAnswer.name === evt.target.name){
             setShowAnswer({
                 'name': evt.target.name,
@@ -48,11 +55,14 @@ const InfoPage = (props: InfoPageProp) => {
                                                 )}
                                             )}
                                         </JavaScriptInfoRefLinkULWrapper>
-                                        <JavaScriptInfoAnswerTextWrapper>
-                                            <JavaScriptInfoTextTitle>Short Description</JavaScriptInfoTextTitle>
-                                            <ContainerBreaker />
-                                            <JavaScriptInfoAnswer>{k.answer}</JavaScriptInfoAnswer> 
-                                        </JavaScriptInfoAnswerTextWrapper>
+                                        {
+                                            k.answer ? 
+                                            <JavaScriptInfoAnswerTextWrapper>
+                                                <JavaScriptInfoTextTitle>Short Description</JavaScriptInfoTextTitle>
+                                                <ContainerBreaker />
+                                                <JavaScriptInfoAnswer>{k.answer}</JavaScriptInfoAnswer> 
+                                            </JavaScriptInfoAnswerTextWrapper> : ""
+                                        }
                                         {k.code ? 
                                             <JavaScriptInfoCode>
                                                 <JavaScriptInfoTextTitle>Sample Code</JavaScriptInfoTextTitle>
@@ -111,7 +121,9 @@ const InfoTableTitle = styled.div`
     padding: 10px;
     border-bottom: 1px solid black;
 `;
-const InfoTableContentContainer = styled.div``
+const InfoTableContentContainer = styled.ul`
+    text-align: start;
+`
 const InfoTableLi = styled.li``
 
 const InfoPageContainer = styled.div`

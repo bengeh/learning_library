@@ -45,20 +45,20 @@
         {
             "index": 8,
             "question": "inline vs block vs inline-block",
-            "link": [""],
+            "link": ["https://www.samanthaming.com/pictorials/css-inline-vs-inlineblock-vs-block/"],
             "answer": "",
             "table": [
                 {
                     "title": "inline",
-                    "content": ["a", "b"]
+                    "content": ["This one displays the element inline or on the same line. In other words, inline elements do NOT start on a new line and only takes up as much width as its content.", "Any height and width properties will have no effect."]
                 },
                 {
                     "title": "block",
-                    "content": ["c", "d"]
+                    "content": ["Starts on a NEW line and takes up the full width available.", "Block elements will occupy the entire width of its parent element."]
                 },
                 {
                     "title": "inline-block",
-                    "content": ["e","f"]
+                    "content": ["This one displays the element inline or on the same line. In other words, inline elements do NOT start on a new line and only takes up as much width as its content.", "Can set height and width values."]
                 }
             ]
         }

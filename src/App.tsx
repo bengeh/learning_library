@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useContext } from 'react';
 import styled from 'styled-components';
 import './App.css';
 import Header from './components/Header';
@@ -15,44 +15,52 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+import HeaderContext from './components/HeaderContext';
 
+const openMenu = {
+  isOpen: false
+}
 
 function App() {
+  const [state, setState] = useState({isMenuOpen: false});
+  
   return (
-  <Router basename="/">
-    <Header/>
-    <MainPage>
-      <LeftContainer>
-          <GitHubPage />
-      </LeftContainer>
-      <RightContainer>
-        <Switch>
-          <Route path="/frontend/javascript">
-            <InfoPage currPage={"javascript"} questionList={JSQuestions.questions} />
-          </Route>
-          <Route path="/frontend/html">
-            <InfoPage currPage={"html"} questionList={HTMLQuestions.questions} />
-          </Route>
-          <Route path="/frontend/typescript">
-            <InfoPage currPage={"typescript"} questionList={TypeScriptQuestions.questions} />
-          </Route>
-          <Route path="/frontend/css">
-            <InfoPage currPage={"css"} questionList={CSSQuestions.questions} />
-          </Route>
-          <Route path="/frontend/react">
-            <InfoPage currPage={"react"} questionList={ReactJSQuestions.questions} />
-          </Route>
-          <Route path="/backend/go">
-            <InfoPage currPage={"go"} questionList={GoLangQuestion.questions} />
-          </Route>
-          <Route path="/backend/java">
-            <InfoPage currPage={"java"} questionList={ReactJSQuestions.questions} />
-          </Route>
-        </Switch>
-      </RightContainer>
-      </MainPage>
-      <Footer>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></Footer>
-  </Router>
+    <HeaderContext.Provider value={{state, setState}}>
+      <Router basename="/">
+        <Header/>
+        <MainPage>
+          <LeftContainer>
+              <GitHubPage />
+          </LeftContainer>
+          <RightContainer>
+            <Switch>
+              <Route path="/frontend/javascript">
+                <InfoPage currPage={"javascript"} questionList={JSQuestions.questions} />
+              </Route>
+              <Route path="/frontend/html">
+                <InfoPage currPage={"html"} questionList={HTMLQuestions.questions} />
+              </Route>
+              <Route path="/frontend/typescript">
+                <InfoPage currPage={"typescript"} questionList={TypeScriptQuestions.questions} />
+              </Route>
+              <Route path="/frontend/css">
+                <InfoPage currPage={"css"} questionList={CSSQuestions.questions} />
+              </Route>
+              <Route path="/frontend/react">
+                <InfoPage currPage={"react"} questionList={ReactJSQuestions.questions} />
+              </Route>
+              <Route path="/backend/go">
+                <InfoPage currPage={"go"} questionList={GoLangQuestion.questions} />
+              </Route>
+              <Route path="/backend/java">
+                <InfoPage currPage={"java"} questionList={ReactJSQuestions.questions} />
+              </Route>
+            </Switch>
+          </RightContainer>
+          </MainPage>
+          <Footer>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></Footer>
+      </Router>
+    </HeaderContext.Provider>
   );
 }
 const Footer = styled.div``

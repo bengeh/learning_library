@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import styled from 'styled-components';
 import { Link } from "react-router-dom";
 import JavaScript from '../assets/javascript.svg'
@@ -8,24 +8,42 @@ import Css from '../assets/css.svg'
 import ReactSvg from '../assets/react.svg'
 import Go from '../assets/go.svg'
 import Java from '../assets/java.svg'
+import HeaderContext from './HeaderContext'
 
 const Header = () => {
+    var headerMenu = useContext(HeaderContext)
+    
     const [openMenu, setOpenMenu] = useState(false)
     const [openWhichMenu, setOpenWhichMenu] = useState("")
     const openTheMenu = (menu: string) => {
-        if(!openMenu){
-            setOpenMenu(!openMenu)
+        if(!headerMenu.state.isMenuOpen){
+            headerMenu.setState({isMenuOpen: !headerMenu.state.isMenuOpen})
         }
         if(openWhichMenu !== menu){
             setOpenWhichMenu(menu)
         }else{
-            setOpenMenu(!openMenu)
+            headerMenu.setState({isMenuOpen: !headerMenu.state.isMenuOpen})
             setOpenWhichMenu(menu)
         }
     }
-    const closeTheMenu = () => {
-        setOpenMenu(false)
+    const closeTheMenu =  () => {
+        headerMenu.setState({isMenuOpen: false})
     }
+    // const openTheMenu = (menu: string) => {
+    //     if(!openMenu){
+    //         setOpenMenu(!openMenu)
+    //         headerMenu.setState({isMenuOpen: !headerMenu.state.isMenuOpen})
+    //     }
+    //     if(openWhichMenu !== menu){
+    //         setOpenWhichMenu(menu)
+    //     }else{
+    //         setOpenMenu(!openMenu)
+    //         setOpenWhichMenu(menu)
+    //     }
+    // }
+    // const closeTheMenu = () => {
+    //     setOpenMenu(false)
+    // }
     return(
         <HeaderContainer>
             <HeaderWrapperMain>
@@ -35,7 +53,8 @@ const Header = () => {
                     <OpenMenuButton onClick={() => openTheMenu("backend")}>Back End</OpenMenuButton>
                 </HeaderNavigation>
             </HeaderWrapperMain>
-            <HeaderWrapper menuOpen={openMenu}>
+            {/* <HeaderWrapper menuOpen={openMenu}> */}
+            <HeaderWrapper menuOpen={headerMenu.state.isMenuOpen}>
                 {   openWhichMenu === "frontend" ? 
                         <HeaderWrapperContainer>
                             <LinkWrapper><HeaderIcon src={JavaScript} /><Link onClick={closeTheMenu} to={"/frontend/javascript"} style={{ textDecoration: 'none', color: 'black' }}>JavaScript</Link></LinkWrapper>
