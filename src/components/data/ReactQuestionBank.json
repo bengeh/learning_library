@@ -17,6 +17,22 @@
             "question": "What is state in React",
             "link": ["https://www.geeksforgeeks.org/reactjs-state-react/"],
             "answer": "The state is an instance of React Component Class can be defined as an object of a set of observable properties that control the behavior of the component. In other words, the State of a component is an object that holds some information that may change over the lifetime of the component"
+        },
+        {
+            "index": 4,
+            "question": "React VS Vanilla",
+            "link": ["https://www.framer.com/blog/posts/react-vs-vanilla-js/"],
+            "answer": "React forces you to create components changes the way you approach software development. It helps you create your web applications in a more maintainable way. So for complex apps, a library like React is definitely worth the extra learning curve at the start. It means you can write more maintainable apps with fewer bugs.",
+            "table": [
+                {
+                    "title": "React",
+                    "content": ["React apps start with a blank HTML page, and dynamically create the initial state in JavaScript", "React requires you to break your UI into components", "React apps store data in regular JavaScript variables.", "React automatically updates the UI based on setting and changing state within the component."]
+                },
+                {
+                    "title": "VanillaJS",
+                    "content": ["Plain JS apps usually start with the initial UI created on the server (as HTML)", "plain JS apps can be structured in any way you see fit.", "Data for plain JS apps are stored in the DOM itself and has to be found from the DOM before it can be used", "UI updates in plain JS have to happen by finding the DOM node to update and manually appending or removing elements."]
+                }
+            ]
         }
       ]
 }
